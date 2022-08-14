@@ -1,0 +1,292 @@
+@font-face {
+    font-family: 'monsterrat';
+    src: url(fonts/FontsFree-Net-Montserrat-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'michroma';
+    src: url(fonts/Michroma.ttf);
+}
+
+:root {
+    --clr-bg: #062026;
+    --clr-text: #fff;
+
+    --ff-title: 'michroma';
+    --ff-subtitle: 'monsterrat';
+
+    /* mobile */
+    --fs-text-mb: 1.125rem; 
+    --fs-h1-mb: 3.75rem;
+    --fs-subtitle-mb: 1.375rem;
+    --lh-text-mb: 1.8;
+    --lh-h1-mb: 4.25rem;
+    --lh-subtitle-mb: 1.8;
+
+    --mg-top-mb: 4rem;
+
+
+
+    /* desktop */
+    --fs-text-desk: 1.5rem; 
+    --fs-h1-desk: 5rem;
+    --fs-subtitle-desk: 2.2rem;
+    --lh-text-desk: 2.5rem;
+    --lh-h1-desk: 5.5rem;
+    --lh-subtitle-desk: 3.5rem;
+
+    --mg-top-desk: 11rem;
+  
+}
+
+* {
+    padding: 0; 
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* mobile */
+
+/* general styling */
+
+body {
+    width: 85%;
+    margin: 4.375rem auto;
+    color: var(--clr-text);
+    background-color: var(--clr-bg);
+    font-family: var(--ff-title);
+    background-color: #101010;
+}
+
+header, footer {
+    margin-left: 2rem;
+}
+
+
+/* body list */
+
+.content-list {
+    list-style-type: none;
+}
+
+
+/* links */
+
+.span-open,
+.link-item {
+    transition: .8s;
+    transition-property: transform;
+}
+
+.span-open {
+    display: inline-block;
+}
+
+.span-open a {
+    text-decoration: none;
+    color: #fff;
+    padding-left: 5px;
+}
+
+.span-open:hover {
+    transform: scale(1.5);
+}
+
+.span-open:hover a,
+.link-item:hover a {
+    color: #F24194;
+    font-weight: bold;
+}
+
+
+
+
+
+/* typography */
+
+h1, h2, h3, p {margin: 0}
+
+h2 {
+    font-size: var(--fs-subtitle-mb);
+    line-height: var(--lh-subtitle-mb);
+    font-family: var(--ff-subtitle);
+}
+
+p {
+    font-size: var(--fs-text-mb);
+    line-height: var(--lh-text-mb);
+}
+
+.subtitle,
+h1,
+h2 {
+    text-transform: uppercase;
+}
+
+
+/* header */
+
+.underline-1,
+.underline-2 {
+    position: relative;
+    color: #F24194;
+    /* text-decoration: underline solid 4px #F24194; */ 
+}
+
+h1 {
+    font-size: var(--fs-h1-mb);
+    font-family: var(--ff-title);
+    line-height: var(--lh-h1-mb);
+    letter-spacing: -4%;
+}
+
+.subtitle {
+    line-height: var(--lh-subtitle-mb);
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 0.625rem;
+}
+
+.introduction {
+    margin-top: 2rem;
+    width: 80%;
+}
+
+
+/* main */
+
+.content-item {
+    margin-top: var(--mg-top-mb);
+    padding: 0 3rem;
+}
+
+.planet-icon {
+    height: 60px;
+    width: 60px;
+    margin-bottom: .8rem;
+}
+
+.content-item-text {
+    margin-left: 2rem;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.content-item-text:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 3px;
+    background-color: #fff;
+    transform: translateX(-50%);
+    left: 0;
+}
+
+.content-item-text:after {
+    content: '';
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    left: 0;
+    transform: translateX(-50%);
+}
+
+.content-item h2:after {
+    content: '';
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    left: 0;
+    transform: translateX(-50%);
+}
+
+/* footer */
+
+footer {
+    margin-top: 5rem;
+}
+
+.links {
+    list-style-type: none;
+    display: grid;
+    width: 100%;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: start;
+}
+
+.links a {
+    color: #fff;
+}
+
+@media (min-width: 800px) {
+
+    body {
+        width: 90%;
+    }
+    
+    .content-list {
+        list-style-type: none;
+    }
+    
+
+    .introduction {
+        font-size: var(--fs-text-desk);
+        margin-bottom: 2rem;
+    }
+
+    h2 {
+        font-size: var(--fs-subtitle-desk);
+        line-height: var(--lh-subtitle-desk);
+    }
+    
+
+    h1 {
+        font-size: var(--fs-h1-desk);
+        font-family: var(--ff-desk);
+        line-height: var(--lh-h1-desk);
+    }
+
+    .content-item {
+        padding: 0 2rem;
+    }
+
+    .planet-icon {
+        height: 100px;
+        width: 100px;
+    }
+
+    .links {
+        width: 80%;
+        margin-left: 0;
+        align-content: start;
+    }
+
+    .content-list li {
+        position: relative;
+        width: 50%;
+    }
+
+    .content-list li:nth-child(odd) {
+        float: left;
+        clear: right;
+    }
+
+    .content-list li:nth-child(even) {
+        float: right;
+        clear: left;
+    }
+
+    .content-list li:last-child {
+        margin-bottom: 7rem;
+    }
+
+    .content-item-text {
+        padding-left: 1.5rem;
+    }
+
+}
