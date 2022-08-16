@@ -17,7 +17,7 @@
 
     /* mobile */
     --fs-text-mb: 1.125rem; 
-    --fs-h1-mb: 3.75rem;
+    --fs-h1-mb: 3.5rem;
     --fs-subtitle-mb: 1.375rem;
     --lh-text-mb: 1.8;
     --lh-h1-mb: 4.25rem;
@@ -26,14 +26,12 @@
     --mg-top-mb: 4rem;
 
 
-
     /* desktop */
-    --fs-text-desk: 1.5rem; 
-    --fs-h1-desk: 5rem;
-    --fs-subtitle-desk: 2.2rem;
+    --fs-h1-desk: 5.5rem;
+    --fs-subtitle-desk: 2rem;
     --lh-text-desk: 2.5rem;
-    --lh-h1-desk: 5.5rem;
-    --lh-subtitle-desk: 3.5rem;
+    --lh-h1-desk: 6.5rem;
+    --lh-subtitle-desk: 2em;
 
     --mg-top-desk: 11rem;
   
@@ -59,10 +57,10 @@ body {
 
 }
 
-
-
-
-/* body list */
+a {
+    text-decoration: none;
+    color: #fff;
+}
 
 .content-list {
     list-style-type: none;
@@ -82,13 +80,7 @@ body {
 }
 
 .span-open a {
-    text-decoration: none;
-    color: #fff;
     padding-left: 5px;
-}
-
-.span-open:hover {
-    transform: scale(1.5);
 }
 
 .span-open:hover a,
@@ -97,8 +89,9 @@ body {
     font-weight: bold;
 }
 
-
-
+.launch {
+    visibility: hidden;
+}
 
 
 /* typography */
@@ -111,26 +104,18 @@ h2 {
     font-family: var(--ff-subtitle);
 }
 
-p {
-    font-size: var(--fs-text-mb);
-    line-height: var(--lh-text-mb);
-}
-
-.subtitle,
 h1,
 h2 {
     text-transform: uppercase;
 }
 
+p {
+    font-size: var(--fs-text-mb);
+    line-height: var(--lh-text-mb);
+}
+
 
 /* header */
-
-.underline-1,
-.underline-2 {
-    position: relative;
-    color: #F24194;
-    /* text-decoration: underline solid 4px #F24194; */ 
-}
 
 h1 {
     font-size: var(--fs-h1-mb);
@@ -139,22 +124,47 @@ h1 {
     letter-spacing: -4%;
 }
 
+h1 span{
+    color: #F24194;
+}
+
 .subtitle {
     line-height: var(--lh-subtitle-mb);
     text-transform: uppercase;
     font-weight: 300;
+    margin-top: 1rem;
     margin-bottom: 0.625rem;
 }
 
-.introduction {
-    margin-top: 2rem;
-    width: 80%;
+.wrapper-head img {
+    display: none;
 }
 
-header a {
-    visibility: hidden;
+.shuttle-icon {
+    width: 100px;
+    height: 100px;
+    transform: rotate(90deg);
+    animation: moveUpDown 3s linear infinite;
+    border: 2px dotted #F24194;
+    border-radius: 50%;
+    padding: 1.2rem;
 }
 
+
+@keyframes moveUpDown {
+    100% {
+        bottom: 80px;
+    } 
+    
+    50% {
+        bottom: 100px;
+    }
+
+    0% {
+        bottom: 80px;
+    }
+
+}
 
 /* main */
 
@@ -221,8 +231,12 @@ header a {
 
 /* footer */
 
+header {
+    margin: 2rem 2rem 5rem;
+}
+
 footer {
-    margin-top: 5rem;
+    margin: 7rem 2rem 2rem;
 }
 
 .links {
@@ -234,39 +248,46 @@ footer {
     justify-content: start;
 }
 
-.links a {
-    color: #fff;
-}
+
 
 @media (min-width: 800px) {
 
     body {
-        width: 90%;
+        width: 100%;
+        margin: 0;
     }
 
-    header, footer {
-        margin-left: 2rem;
+    .container {
+        width: 80%;
+        margin: 0 auto;
     }
 
-    header {
-        padding: 15rem 0;
+    .wrapper-head {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
         height: 100vh;
+        position: relative;
     }
 
-    header a {
+    .launch {
+        display: flex;
         visibility: unset;
-        text-decoration: none;
-        color: #fff;
+        position: absolute;
+        bottom: 2rem;
+        text-align: center;
     }
 
-    .btn-down {
-        transition: .8s;
-        transition-property: transform;
+    .launch img {
+        display: block;
+        left: 25%;
+        position: absolute;
     }
 
-    .btn-down:hover {
-        transform: scale(1.5);
-        color: #F24194;
+    .launch p {
+        margin: 0 0 1rem;
     }
 
 
@@ -275,14 +296,10 @@ footer {
     }
     
 
-    .introduction {
-        font-size: var(--fs-text-desk);
-        margin-bottom: 2rem;
-    }
-
-    h2 {
+    .subtitle {
         font-size: var(--fs-subtitle-desk);
         line-height: var(--lh-subtitle-desk);
+        margin-top: 1em;
     }
     
 
@@ -290,6 +307,7 @@ footer {
         font-size: var(--fs-h1-desk);
         font-family: var(--ff-desk);
         line-height: var(--lh-h1-desk);
+        letter-spacing: .5rem;
     }
 
     .btn-down {
@@ -297,7 +315,7 @@ footer {
     }
 
     .content-item {
-        padding: 0 2rem;
+        padding: 0 0 2rem;
     }
 
     .planet-icon {
@@ -338,4 +356,7 @@ footer {
         padding-left: 1.5rem;
     }
 
+    footer {
+        margin: 5rem 0;
+    }
 }
