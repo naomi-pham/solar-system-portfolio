@@ -269,7 +269,7 @@ footer {
     body {
         margin: 0;
         background-color: #242d24;
-        background-image: linear-gradient(0deg, #242d24 74%, #f24194c9 75%, #2a302a65 78%);
+        background-image: linear-gradient(0deg, #1c1c1c 74%, #f24194c9 75%, #1c1c1c 78%);
         font-size: var(--fs-text-mb);
     }
 
