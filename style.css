@@ -56,6 +56,11 @@ body {
     animation: filter-animation 5s infinite;
 }
 
+/* font-family: "Inter", sans-serif;
+background: linear-gradient(90deg, hsla(190, 75%, 29%, 1), hsla(290, 75%, 29%, 1));
+background-size: 600%;        
+} */
+
 
 @keyframes filter-animation {
     0% {
@@ -274,7 +279,10 @@ footer {
         width: 100%;
         margin: 0;
         background-color: #242d24;
-        background-image: linear-gradient(0deg, #242d24 72%, #f24194c9 73%, #2a302a65 76%);
+background-image: linear-gradient(0deg, #242d24 72%, #f24194c9 73%, #2a302a65 76%);
+
+
+
     }
 
     .container {
