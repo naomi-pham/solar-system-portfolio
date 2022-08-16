@@ -51,10 +51,32 @@ body {
     width: 85%;
     margin: 4.375rem auto;
     color: var(--clr-text);
-    background-color: var(--clr-bg);
+    background: var(--clr-bg);
     font-family: var(--ff-title);
-    background-color: #101010;
+    animation: filter-animation 8s infinite;
+}
 
+/* font-family: "Inter", sans-serif;
+background: linear-gradient(90deg, hsla(190, 75%, 29%, 1), hsla(290, 75%, 29%, 1));
+background-size: 600%;        
+} */
+
+.aurora {
+    background-color: rgb(6, 10, 40);
+}
+
+@keyframes filter-animation {
+    0% {
+      filter: hue-rotate(0deg);
+    }
+    
+    50% {
+      filter: hue-rotate(60deg);
+    }
+    
+    100% {
+      filter: hue-rotate(0deg);
+    }
 }
 
 a {
