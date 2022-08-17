@@ -9,7 +9,7 @@
 }
 
 :root {
-    --clr-bg: #062026;
+    --clr-bg: #1c1c1c;
     --clr-text: #fff;
 
     --ff-title: 'michroma';
@@ -23,7 +23,7 @@
     --lh-h1-mb: 4.25rem;
     --lh-subtitle-mb: 1.8;
 
-    --mg-top-mb: 4rem;
+    --mg-top-mb: 5rem;
 
 
     /* desktop */
@@ -49,7 +49,7 @@ body {
     width: 100%;
     margin: 4.375rem auto;
     color: var(--clr-text);
-    background-color: #1c1c1c;
+    background-color: var(--clr-bg);
     font-family: var(--ff-title);
     /* animation: filter-animation 5s infinite; */
 }
@@ -268,9 +268,16 @@ footer {
 
     body {
         margin: 0;
-        background-color: #242d24;
-        background-image: linear-gradient(0deg, #1c1c1c 74%, #f24194c9 74%, #1c1c1c 78%);
+        
         font-size: var(--fs-text-mb);
+    }
+
+    header {
+        background-color: green;
+        padding: 0;
+        margin: 0;
+        background-color: #242d24;
+        background-image: linear-gradient(0deg, #1c1c1c 0%, #f241948a 5%, #1c1c1c 30%); 
     }
 
     .container {
