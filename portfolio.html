@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="container navbar">
+        <ul class="nav-list">
+            <li class="nav-item link-item"><a href="#">home</a></li>
+            <li class="nav-item link-item"><a href="#">about</a></li>
+            <li class="nav-item link-item"><a href="#">portfolio</a></li>
+            <li class="nav-item link-item"><a href="#">contact</a></li>
+        </ul>
+    </nav>
+    <main class="container">
+        <h2 class="page-title">My Portfolio</h2>        
+        <div class="carousel">
+            <div class="carousel-item carousel-item-visible card-container">
+                <div class="card-item">
+                    <h3>Shopping list</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    <button>View more</button>
+                </div>
+                <div class="card-item">
+                    <h3>Shopping list</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    <button>View more</button>
+                </div>
+            </div>
+            
+            <div class="carousel-item card-container">
+                <div class="card-item">
+                    <h3>Hello list</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    <button>View more</button>
+                </div>
+                <div class="card-item">
+                    <h3>Hello list</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    <button>View more</button>
+                </div>
+            </div>
+
+            <div class="carousel-action">
+                <button id="prev-btn" class="prev btn"><a href="#"><i class='bx bxs-chevrons-left'></i></a></button>
+                <button id="next-btn" class="next btn"><a href="#"><i class='bx bxs-chevrons-right'></i></a></button>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    <script src="index.js"></script>
+    
+</body>
+</html>

@@ -13,19 +13,20 @@
     --clr-text: #fff;
     --clr-accent: #F24194;
 
-    --ff-title: 'michroma';
-    --ff-subtitle: 'michroma', sans-serif;
-    --ff-heading: 'montserrat', sans-serif;
+    --ff-primary: 'michroma', sans-serif;
+    --ff-secondary: 'montserrat', sans-serif;
+
+    
+    --fs-subtitle: 2rem;
 
     /* mobile */
     --fs-text-mb: 1.125rem; 
-    --fs-h1-mb: 3.5rem;
-    --fs-subtitle-mb: 1.8rem;
-    --fs-small: 1rem;
+    --fs-h1-mb: 2.8rem;
+    --fs-h3-mb: 1.8rem;
+    --fs-small: .8rem;
 
-    --lh-text-mb: 2;
-    --lh-h1-mb: 4rem;
-    --lh-subtitle-mb: 2.3;
+
+    --lh-h1-mb: 3rem;
 
     --mg-top-mb: 5rem;
 
@@ -33,11 +34,9 @@
     /* desktop */
     --fs-text-desk: 1.25rem;
     --fs-h1-desk: 6rem;
-    --fs-subtitle-desk: 2rem;
-    --fs-h2-desk: 2rem;
+    --fs-h3-desk: 2rem;
 
     --lh-h1-desk: 6.5rem;
-    --lh-subtitle-desk: 2.5;
 
     --mg-top-desk: 11rem;
 }
@@ -55,11 +54,10 @@ body {
     width: 100%;
     margin: 4.375rem auto;
     color: var(--clr-text);
+    font-family: var(--ff-primary);
     background-color: var(--clr-bg);
-    font-family: var(--ff-title);
     font-size: var(--fs-text-mb);
-    line-height: var(--lh-text-mb);
-    /* animation: filter-animation 5s infinite; */
+    line-height: 2.3;
 }
 
 .container {
@@ -76,29 +74,31 @@ ul {
     list-style-type: none;
 }
 
-/* @keyframes filter-animation {
-    0% {
-      filter: hue-rotate(0deg);
-    }
-    
-    50% {
-      filter: hue-rotate(0deg);
-    }
-    
-    100% {
-      filter: hue-rotate(0deg);
-    }
-} */
-
 
 /* links */
 
+.btn {
+    background-color: transparent;
+    border: 0;
+}
+
+.span-open a,
+.btn a {
+    font-size: 2rem;
+    color: var(--clr-accent);
+    font-weight: bold;
+}
+
+
+.btn,
 .span-open,
 .link-item {
     transition: .8s;
     transition-property: transform;
 }
 
+
+.btn,
 .span-open {
     display: inline-block;
     margin-bottom: 0;
@@ -106,12 +106,13 @@ ul {
 
 .span-open a {
     font-size: 25px;
-    color: var(--clr-accent);
-    font-weight: bold;
     margin-left: 3px;
     vertical-align: middle;
 }
 
+
+.btn:hover,
+.btn:hover a,
 .span-open:hover, 
 .span-open:hover a {
     transform: scale(1.5);
@@ -129,54 +130,58 @@ ul {
 
 /* typography */
 
-h1, h2, h3, p {margin: 0}
+h1, h3, p {margin: 0}
 
-h2 {
-    font-size: var(--fs-subtitle-mb);
-    line-height: var(--lh-subtitle-mb);
-    font-family: var(--ff-heading);
-    color: var(--clr-accent);
-    font-weight: 700;
-}
 
 h1,
-h2 {
+.subtitle,
+.link-item,
+.nav-item {
     text-transform: uppercase;
 }
 
+
+h3 {
+    font-size: var(--fs-h3-mb);
+}
+
+.nav-item,
+.link-item {
+    font-size: var(--fs-small);
+}
+
+.card-item p,
 .content-list li p {
     font-size: var(--fs-text-mb);
     line-height: var(--lh-text-mb);
+    color: rgba(255, 255, 255, 0.88);
 }
 
 
 /* header */
 
-header {
-    margin: 2rem 2rem 0;
-}
 
 h1 {
     font-size: var(--fs-h1-mb);
-    font-family: var(--ff-title);
     line-height: var(--lh-h1-mb);
-    letter-spacing: -4%;
 }
 
 h1 span{
     color: var(--clr-accent);
 }
 
-.subtitle {
-    line-height: var(--lh-subtitle-mb);
-    font-family: var(--ff-subtitle);
-    text-transform: uppercase;
-    margin-top: 1rem;
-    margin-bottom: 0.625rem;
+header .subtitle {
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-h3-mb);
+    margin-top: .8rem;    
 }
 
 .launch {
     visibility: hidden;
+}
+
+.wrapper-head {
+    text-align: center;
 }
 
 .wrapper-head a,
@@ -242,7 +247,7 @@ h1 span{
 
 .content-item-text:before, 
 .content-item-text:after,
-.content-item h2:after {
+.content-item h3:after {
     content: '';
     position: absolute;
     background-color: var(--clr-text);
@@ -256,14 +261,14 @@ h1 span{
     width: 3px;
 }
 
-.content-item h2:after,
+.content-item h3:after,
 .content-item-text:after {
     height: 15px;
     width: 15px;
     border-radius: 50%;
 }
 
-.content-item h2:after {
+.content-item h3:after {
     left: 0;
 }
 
@@ -271,7 +276,7 @@ h1 span{
 /* footer */
 
 footer {
-    margin: 7rem 2rem 2rem;
+    margin: 7rem 2rem 0;
 }
 
 .links {
@@ -280,6 +285,99 @@ footer {
     margin: 0 auto;
     grid-template: 1fr 1fr 1fr / 1fr 1fr;
     justify-content: start;
+}
+
+
+/* my portfolio */
+
+
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.nav-item + .nav-item {
+    margin-left: 2rem;
+}
+
+.page-title {
+    font-size: var(--fs-h1-mb);
+    line-height: var(--lh-h1-mb);
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 3.2rem;
+    color: var(--clr-accent);
+}
+
+.card-container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    gap: 1.6rem;
+}
+
+.card-item {
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid #1E1F2B;
+    box-shadow: 10px 10px 30px rgba(18, 18, 18, 0.2);
+    border-radius: 1.125rem;
+    padding: 2rem;
+    transition: 2s;
+    transition-property: transform;
+}
+
+.card-item p {
+    margin: 1rem 0 2rem;
+}
+
+.card-item button {
+    background: var(--clr-accent);
+    border-radius: 1.8rem;
+    padding: .5rem 1.5rem;
+    border: 0;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.card-item button:hover {
+    border: 1px solid var(--clr-accent);
+    background-color: var(--clr-bg);
+    color: var(--clr-text);
+    transition: .2s;
+}
+
+.card-item:hover {
+    transform: scale(1.15);
+    z-index: 10;
+    background: #525252;
+}
+
+.carousel {
+    position: relative;
+}
+
+.carousel-action {
+    margin: 3rem 0;
+    position: absolute;
+    top: 40%;
+    display: flex;
+    transform: translate(-50%);
+    width: 100%;
+    justify-content: space-between;
+    left: 50%;
+}
+
+.carousel-item,
+.carousel-item-hidden {
+    display: none;
+}
+
+.carousel-item-visible {
+    display: flex;
 }
 
 
@@ -293,34 +391,21 @@ footer {
         font-size: var(--fs-text-desk);
     }
 
-    h1 {
-        font-size: var(--fs-h1-desk);
-        font-family: var(--ff-desk);
-        line-height: var(--lh-h1-desk);
-        letter-spacing: .5rem;
-    }
-
-    h2 {
-        font-size: var(--fs-h2-desk);
-        line-height: var(--lh-subtitle-desk);
-    }
-
-    .subtitle {
-        font-size: var(--fs-subtitle-desk);
-        line-height: var(--lh-subtitle-desk);
-        margin-top: 1em;
-    }
-
-    p,
-    .content-list li p {
-        font-size: var(--fs-text-desk);
-    }
-
     header {
         padding: 0;
         margin: 0;
         background-color: var(--clr-bg);
         background-image: linear-gradient(0deg, var(--clr-bg) 0%, #f241948a 5%, var(--clr-bg) 30%); 
+    }
+
+    h1 {
+        font-size: var(--fs-h1-desk);
+        line-height: var(--lh-h1-desk);
+        letter-spacing: .5rem;
+    }
+
+    header .subtitle {
+        font-size: var(--fs-h3-desk);
     }
 
     .container {
@@ -375,6 +460,10 @@ footer {
         align-content: start;
     }
 
+    .content-list li p {
+        font-size: var(--fs-text-desk);
+    }
+
     .content-list li {
         position: relative;
         width: 50%;
@@ -405,30 +494,68 @@ footer {
     }
 
     footer {
-        margin: 5rem 0;
+        margin: 5rem 0 3rem;
     }
 
     .links {
         grid-template-columns: 1fr 1fr 1fr;
     }
-}
+
+    /* my portfolio */
+
+    nav {
+        padding-top: 3rem;
+    }
+
+    .page-title {
+        font-size: 4rem;
+        line-height: 4.5rem;
+        margin-top: 6.5rem;
+        margin-bottom: 4.5rem;
+    }
+
+    
+    .card-item p {
+        margin: 1rem 0 2rem;
+        font-size: var(--fs-text-desk);
+    }
+} 
+
 
 @media (min-width: 1000px) {
+    
 
-    body {
-        margin: 0;
-        font-size: 1.5rem;
+    /* my portfolio */
+
+    .nav-list {
+        justify-content: flex-end;
     }
 
-    h2 {
-        font-size: 2.5rem;
-        line-height: 5rem;
-    }
-
-    p, 
-    .content-list li p {
-        font-size: 1.5rem;
-        line-height: 2.5rem;
+    .page-title {
+        margin-top: 9.6rem;
+        margin-bottom: 6.5rem;
+        color: var(--clr-accent);
     }
     
+    .nav-item + .nav-item {
+        margin-left: 2rem;
+    }
+    
+    .card-container {
+        width: 90%;
+        flex-direction: row;
+    }
+    
+    .card-item {
+        padding: 2.5rem;
+    }
+    
+    .card-item button {
+        font-size: var(--fs-text-mb);
+    }
+    
+    .carousel-action {
+        top: 38%;
+        width: 100%;
+    } 
 }
