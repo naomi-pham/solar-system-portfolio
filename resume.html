@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="resume">
+        <div id="resume-left" class="resume-left">
+            <div class="resume-nav">
+                <ul id="resume-navbar">
+                    <li class="resume-click resume-nav-item">
+                        <a class="nav-link" href="#resume-social">
+                            <i class='nav-icon icon-lg bx bxl-linkedin'></i>
+                            <p>Socials</p>
+                        </a>
+                    </li>
+                    <li class="resume-nav-item">
+                        <a class="nav-link" href="#resume-profile">
+                            <i class='nav-icon icon-lg bx bx-user' ></i>
+                            <p>Profile</p>
+                        </a>
+                    </li>
+                    <li class="resume-nav-item">
+                        <a class="nav-link" href="#resume-education">
+                            <i class='nav-icon icon-lg bx bx-code-alt' ></i>
+                            <p>Education</p>
+                        </a>
+                    </li>
+                    <li class="resume-nav-item">
+                        <a class="nav-link" href="#resume-skills">
+                            <i class='nav-icon icon-lg bx bxs-file-html' ></i>
+                            <p>Skills</p>
+                        </a>
+                    </li>
+                    <li class="resume-nav-item">
+                        <a class="nav-link" href="#resume-experience">
+                            <i class='nav-icon icon-lg bx bx-briefcase-alt' ></i>
+                            <p>Experience</p>
+                        </a>
+                    </li>
+                    <li class="resume-nav-item">
+                        <a class="nav-link" href="#resume-certificate">
+                            <i class='nav-icon icon-lg bx bx-note' ></i>
+                            <p>Certificate</p>
+                        </a>
+                    </li>
+                    <li class="resume-nav-item">
+                        <a class="nav-link" href="#resume-interests">
+                            <i class='nav-icon icon-lg bx bx-music' ></i>
+                            <p>Interests</p>
+                        </a>
+                    </li>
+                </ul>
+                <div class="resume-menu">
+                    <a href="" class="logo">Naomi</a>
+                    <button id="toggle-btn"><i class='bx bxs-heart'></i></button>
+                    <button id="close-btn"><i class='bx bx-x'></i></button>
+                </div>
+            </div>
+            
+            <button id="change-theme">
+                <i id="sun" class='bx bx-sun'></i>
+                <i id="moon" class='hide-moon bx bx-moon'></i>
+            </button>
+            <section id="resume-header" class="resume-header">
+                <img class="avatar" src="images/avatar-cv.jpg" alt="">
+                <h1 class="title">Naomi Pham</h1>
+                <p class="subtitle">Front-end Developer</p>
+                <button class="download-btn">Download</button>
+            </section>
+            <section id="resume-address" class="address">
+                <div class="address-body">
+                    <p><span><i class='resume-icon bx bxs-home'></i></span>Saarbrücker 223, 66125, Saarbrücken</p>
+                    <p><span><i class='resume-icon bx bxs-envelope'></i></span>phambaonguyendn@gmail.com</p>
+                    <p><span><i class='resume-icon bx bxs-phone'></i></span>+49 1786 218 902</p>
+                </div>
+            </section>
+            <section id="resume-social" class="social">
+                <h2 class="social-title">Socials</h2>
+                <div class="social-body">
+                    <p><span><i class='resume-icon bx bxl-linkedin'></i></span><a class="resume-link" href="#">LinkedIn</a></p>
+                    <p><span><i class='resume-icon bx bxl-github' ></i></span><a class="resume-link" href="#">Github</a></p>
+                </div>
+            </section>
+            <section id="resume-profile" class="profile">
+                <h2 class="profile-title">Profile</h2>
+                <div class="profile-body">
+                    <p>I create beautiful things with Figma, HTML/CSS, and JavaScript.</p>
+                </div>
+            </section>
+            <section id="resume-education" class="education">
+                <h2 class="education-title">Education</h2>
+                <div class="education-body">
+                    <div class="education-body-item">
+                        <h3>Web Developer</h3>
+                        <p>Scrimba Front-end Course</p>
+                        <p class="date">2022</p>
+                    </div>
+                    <div class="education-body-item">
+                        <h3>International Business</h3>
+                        <p>HTW University of Applied Sciences</p>
+                        <p class="date">2020 - 2021</p>
+                    </div>
+                    <div class="education-body-item">
+                        <h3>International Business</h3>
+                        <p>LAB Univesity of Applied Sciences</p>
+                        <p class="date">2018 - 2021</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="resume-right">
+            <section id="resume-skills" class="skills">
+                <h2 class="skills-title">Skills</h2>
+                <div class="skills-body">
+                    <p><span><i class='body-icon icon-lg icon-lg bx bxs-file-html' ></i></span>HTML</p>
+                    <p><span><i class='body-icon icon-lg bx bxs-file-css' ></i></span>CSS</p>
+                    <p><span><i class='body-icon icon-lg bx bxl-javascript' ></i></span>JavaScript</p>
+                    <p><span><i class='body-icon icon-lg bx bxl-bootstrap' ></i></span>Bootstrap</p>
+                    <p><span><i class='body-icon icon-lg bx bxl-figma' ></i></span>Figma</p>
+                    <p><span><i class='body-icon icon-lg bx bxl-react' ></i></span>React</p>
+                </div>
+            </section>
+            <section id="resume-experience" class="experience">
+                <h2 class="experience-title">Experience</h2>
+                <div class="experience-body">
+                    <div class="experience-body-item">
+                        <h3>HTML/CSS</h3>
+                        <ul>
+                            <li><a class="resume-link" href="#">Responsive Portfolio Website</a></li>
+                            <li><a class="resume-link" href="#">eCommerce Landing Page</a></li>
+                        </ul>
+                    </div>
+                    <div class="experience-body-item">
+                        <h3>JavaScript</h3>
+                        <ul>
+                            <li><a class="resume-link" href="#">Shopping List App</a></li>
+                            <li><a class="resume-link" href="#">Downloadable Resume</a></li>
+                        </ul>
+                    </div>
+                    <div class="experience-body-item">
+                        <h3>Figma</h3>
+                        <ul>
+                            <li><a class="resume-link" href="#">Fibonacci Logo</a></li>
+                            <li><a class="resume-link" href="#">Grid Menus</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section id="resume-certificate" class="certification">
+                <h2 class="certification-title">Certificates</h2>
+                <div class="certification-body">
+                    <ul>
+                        <li>Scrimba Front-end Developer Career Path (2022)</li>
+                    </ul>
+                </div>
+            </section>
+            <section id="resume-interests" class="interests">
+                <h2 class="interests-title">Interests</h2>
+                <div class="interests-body">
+                    <p><span><i class='body-icon icon-lg bx bx-book-open' ></i></span>Read</p>
+                    <p><span><i class='body-icon icon-lg bx bx-music' ></i></span>Music</p>
+                    <p><span><i class='body-icon icon-lg bx bx-movie' ></i></span>Movie</p>
+                    <p><span><i class='body-icon icon-lg bx bx-code-alt' ></i></span>Code</p>
+                </div>
+            </section>
+            
+            <script src="resume.js"></script>
+                </div>
+        </div>
+    
+</body>
+</html>
