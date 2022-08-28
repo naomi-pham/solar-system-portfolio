@@ -1,7 +1,9 @@
 const nav = document.getElementById("resume-navbar")
+const navLink = document.getElementsByClassName("nav-link")
 const toggleBtn = document.getElementById("toggle-btn")
 const closeBtn = document.getElementById("close-btn")
 const changeTheme = document.getElementById("change-theme")
+
 const storedTheme = localStorage.getItem("theme")
 
 // use theme from localStorage
