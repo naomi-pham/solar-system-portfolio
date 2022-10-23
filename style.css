@@ -32,19 +32,19 @@
 }
 
 html[data-theme="light"] {
-    --clr-bg: #fcfcfd;
+    --clr-bg: #fafafa;
     --clr-text: #161717;
     --clr-accent: #f5338d;
-    --clr-resume-left: #dee4e7;
-    --clr-resume-navbar: #e8ecee;
+    --clr-resume-left: #e5e7eb;
+    --clr-resume-navbar: #f3f4f6;
 }
 
 html[data-theme="dark"] {
-    --clr-bg: #161717;
+    --clr-bg: #27272a;
     --clr-text: #fcfcfd;
     --clr-accent: #F24194;
-    --clr-resume-left: #595b5c;
-    --clr-resume-navbar: #85898b;
+    --clr-resume-left: #3f3f46;
+    --clr-resume-navbar: #52525b;
 }
 
 * {
@@ -57,10 +57,11 @@ body {
     width: 100%;
     margin: 4.375rem auto;
     font-family: var(--ff-primary);
-    background-color: var(--clr-bg);
+    background-color: #27272a;
     font-size: var(--fs-text-normal);
     line-height: 2.3rem;
     color: var(--clr-text);
+    background-color: var(--clr-bg);
 }
 
 /* typography */
@@ -211,7 +212,7 @@ footer {
     width: 100px;
     height: 100px;
     transform: rotate(90deg);
-    animation: moveUpDown 3s linear infinite;
+    animation: moveUpDown 2s linear infinite;
     border: 2px dotted var(--clr-text);
     border-radius: 50%;
     padding: 1.2rem;
@@ -220,7 +221,7 @@ footer {
 
 @keyframes moveUpDown {
     100% {
-        bottom: 80px;
+        bottom: 90px;
     } 
     
     50% {
@@ -228,7 +229,7 @@ footer {
     }
 
     0% {
-        bottom: 80px;
+        bottom: 90px;
     }
 
 }
@@ -342,7 +343,7 @@ footer {
 }
 
 .card-item {
-    background: rgba(255, 255, 255, 0.12);
+    background: #262626;
     border: 1px solid #1E1F2B;
     box-shadow: 10px 10px 30px rgba(18, 18, 18, 0.2);
     border-radius: 1.125rem;
@@ -356,10 +357,10 @@ footer {
 }
 
 .card-item button {
-    background: var(--clr-accent);
-    border-radius: 1.8rem;
-    padding: .5rem 1.5rem;
+    background-color: #3f3f46;
     border: 0;
+    color: var(--clr-text);
+    padding: .5rem 1.5rem;
     font-size: 1rem;
     font-weight: bold;
 }
@@ -371,10 +372,10 @@ footer {
     transition: .2s;
 }
 
-.card-item:hover {
-    transform: scale(1.15);
-    z-index: 10;
-    background: #37474f;
+.portfolio-buttons {
+    display: flex;
+    gap: .5rem;
+    justify-content: center;
 }
 
 .carousel {
@@ -419,9 +420,7 @@ footer {
     margin-bottom: 5rem;
 }
 
-/* .resume a:hover {
-    color: var(--clr-accent);
-} */
+
 
 i:hover {
     border-color: var(--clr-accent);
@@ -460,6 +459,12 @@ i:hover {
     text-align: center;
 }
 
+.resume-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
 .download-btn {
     width: 150px;
     height: 50px;
@@ -468,13 +473,15 @@ i:hover {
     margin-top: 3rem;
     border: 1.5px solid var(--clr-text);
     color: var(--clr-text);
-    transition: 1s transform;
+    transition: 1s;
 }
 
 .download-btn:hover {
     border-color: var(--clr-accent);
     font-weight: bold;
-    transform: scale(1.1);
+    border-color: var(--clr-text);
+    background-color: var(--clr-text);
+    color: var(--clr-bg);
 }
 
 
@@ -604,7 +611,7 @@ i:hover {
 #toggle-btn:hover {
     cursor: pointer;
     color: var(--clr-accent);
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 #close-btn {
@@ -796,10 +803,10 @@ i:hover {
     }
 
     .page-title {
-        font-size: 4rem;
-        line-height: 4.5rem;
-        margin-top: 6.5rem;
-        margin-bottom: 4.5rem;
+        font-size: 3.5rem;
+        line-height: 4rem;
+        margin-top: 6rem;
+        margin-bottom: 0;
     }
 
     .card-item h3 {

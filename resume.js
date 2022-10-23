@@ -3,7 +3,6 @@ const navLink = document.getElementsByClassName("nav-link")
 const toggleBtn = document.getElementById("toggle-btn")
 const closeBtn = document.getElementById("close-btn")
 const changeTheme = document.getElementById("change-theme")
-
 const storedTheme = localStorage.getItem("theme")
 
 // use theme from localStorage
@@ -38,7 +37,9 @@ closeBtn.addEventListener("click", function() {
 
 // when click nav-link, close navbar 
 
-navLink.forEach(n => n.addEventListener("click", linkAction))
+for (let i=0; i<navLink.length; i++) {
+    navLink[i].addEventListener("click", linkAction)
+}
 
 // functions
 
